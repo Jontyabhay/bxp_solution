@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Writing in HTML format</title>
+</head>
+<body>
+    <script>
+      function matrixmovie()
+{
+    for (var i=1;i<101;i++)
+    {
+        if (i % 3 === 0 && i % 5 === 0)
+        {
+            document.writeln("\n bogeyman ");
+        }
+        else if (i % 3 === 0)
+        {
+            document.writeln(" \n John ");
+        }
+        else if (i % 5 === 0)
+        {
+            document.writeln(" \n Wick ");
+        }
+        else
+        {
+            document.writeln(`${i}`);
+        }
+        
+    }
+}
+
+matrixmovie();
+    </script>
+</body>
+</html>
