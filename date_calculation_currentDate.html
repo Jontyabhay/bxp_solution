@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Refresh the page to get another set of random arrays-->
+<head>
+    <meta charset="utf-8">
+    <title>Writing in HTML format</title>
+</head>
+<body>
+    <script>
+
+function lotteryday()
+{
+    var d = new Date();
+    console.log(d);
+    if (d.getDay() === 0)
+    {
+        document.writeln("Today is not a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 3);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    else if (d.getDay() === 1)
+    {
+        document.writeln("Today is not a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 2);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    else if (d.getDay() === 2)
+    {
+        document.writeln("Today is not a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 1);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    else if (d.getDay() === 3)
+    {
+        document.writeln("Today is a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 3);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    else if (d.getDay() === 4)
+    {
+        document.writeln("Today is not a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 2);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    else if (d.getDay() === 5)
+    {
+        document.writeln("Today is not a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 1);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    else if (d.getDay() === 6)
+    {
+        document.writeln("Today is a draw date!");
+        var newd = new Date(d);
+        newd.setDate(d.getDate() + 4);
+        document.writeln(`Next draw date is: ${newd.getDate()}/${newd.getMonth()+1}/${newd.getFullYear()} at 8 PM`);
+    }
+    
+    
+}
+
+lotteryday();
+</script>
+</body>
+</html>

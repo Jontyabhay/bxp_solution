@@ -1,0 +1,61 @@
+<body>
+    <p>Enter a date to get lucky draw: </p> 
+    <input type="date" id="dt" onchange="mydate1();"/>
+    <input type="text" id="ndt"  onclick="mydate();" hidden />
+</body>
+
+<!--Refresh the page to enter another date after every next time-->
+
+<script>
+function mydate()
+{
+  //alert("");
+document.getElementById("dt").hidden=false;
+document.getElementById("ndt").hidden=true;
+}
+function mydate1()
+{
+ d=new Date(document.getElementById("dt").value);
+ day = d.getDay();
+ var newd = new Date(d);
+ if (day === 0)
+ {
+     newd.setDate(d.getDate() + 3)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ if (day === 1)
+ {
+     newd.setDate(d.getDate() + 2)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ if (day === 2)
+ {
+     newd.setDate(d.getDate() + 1)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ if (day === 3)
+ {
+     document.writeln("Today is the draw date!!");
+     newd.setDate(d.getDate() + 3)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ if (day === 4)
+ {
+     newd.setDate(d.getDate() + 2)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ if (day === 5)
+ {
+     newd.setDate(d.getDate() + 1)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ if (day === 6)
+ {
+     document.writeln("Today is a draw date!!");
+     newd.setDate(d.getDate() + 4)
+     document.writeln(`The next draw date is: ${newd.getMonth()+1}/${newd.getDate()}/${newd.getFullYear()}`);
+ }
+ document.getElementById("ndt").hidden=false;
+ document.getElementById("dt").hidden=true;
+}
+</script>

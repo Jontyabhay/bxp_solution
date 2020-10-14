@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"> <!--Refresh the page to get another set of random arrays-->
+<head>
+    <meta charset="utf-8">
+    <title>Writing in HTML format</title>
+</head>
+<body>
+    <script>
+      function randomnumber()
+{
+    let arr = [];
+    for (var j = 1; j < 501; j++)
+    {
+        var x = Math.floor((Math.random() * 500) + 1); //generates a random number
+        arr.push(x);
+    }
+    document.writeln(arr + ' ');
+    var index = Math.floor(Math.random() * arr.length); // takes a random number from array
+    document.writeln(`Random element to be removed is: ${arr[index]} `);
+    arr.splice(index,1); // removes that random number
+    document.writeln(` New Array is: ${arr}`);
+}
+
+randomnumber();
+    </script>
+</body>
+</html>
